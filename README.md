@@ -1,8 +1,8 @@
-📌 #APLICACION NODE JS
+#APLICACION NODE JS 📌
 - Aplicacion desarrollada Node JS, con el fin de poner en practica los conocimientos adquiridos, durante el aprendizaje del mismo.
 
 
-🚀 #Tecnologías Utilizadas
+#Tecnologías Utilizadas 🚀
 - Node.js – Entorno de ejecución de JavaScript
 - Express.js – Framework para la creación de servidores
 - EJS – Motor de plantillas para la generación de vistas dinámicas
@@ -11,11 +11,11 @@
 - Git – Control de versiones
 
 
-👨‍💻 #Desarrollado por
+#Desarrollado por 👨‍💻 <br />
 Nelson Muñoz
 
 
-💻 #Requisitos Previos
+#Requisitos Previos 💻 <br />
 Antes de instalar la aplicación, asegúrate de tener instalado:
 
 - Node.js
@@ -23,7 +23,7 @@ Antes de instalar la aplicación, asegúrate de tener instalado:
 - Visual Studio Code
 
 
-📂 #Instalación y Configuración <br />
+#Instalación y Configuración 📂 <br />
 1. Clonar el repositorio
 ```
    git clone https://github.com/tu-usuario/tu-repositorio.git
@@ -32,7 +32,7 @@ Antes de instalar la aplicación, asegúrate de tener instalado:
 3. Abrir el proyecto en Visual Studio Code
 ```
    code .
-´´´
+```
 5. Instalar dependencias
 ```
    npm install
@@ -49,17 +49,17 @@ Antes de instalar la aplicación, asegúrate de tener instalado:
 
 
 
-📌 Estructura del Proyecto <br />
+#Estructura del Proyecto 📌 <br />
 📂 SITIO-WEB-NODE-JS <br />
-|── 📂 src/                  &nbsp;&nbsp;**Carpeta de recursos de la aplicación**<br />
-│── 📂 src/public/           &nbsp;&nbsp;**Archivos estáticos (CSS, imágenes, JS)** <br />
-│── 📂 src/views/            &nbsp;&nbsp;**Plantillas EJS**<br />
-│── 📂 src/routes/           &nbsp;&nbsp;**Rutas de la aplicación**<br />
-│── 📜 src/index.js          &nbsp;&nbsp;**Archivo principal de la aplicación**<br />
-│── 📜 .gitignore            &nbsp;&nbsp;**Archivo para controlar lo que no queremos que se suba con el commit**<br /> 
-│── 📜 package-lock.js       &nbsp;&nbsp;**Archivo que contiene la informacion de los modulos y dependencias**<br />
-│── 📜 package.json          &nbsp;&nbsp;**Dependencias y configuración de npm**<br />
-│── 📜 README.md             &nbsp;&nbsp;**Documentación**<br />
+|── 📂 src/                  &nbsp;&nbsp; **Carpeta de recursos de la aplicación**<br />
+│── 📂 src/public/           &nbsp;&nbsp; **Archivos estáticos (CSS, imágenes, JS)** <br />
+│── 📂 src/views/            &nbsp;&nbsp; **Plantillas EJS**<br />
+│── 📂 src/routes/           &nbsp;&nbsp; **Rutas de la aplicación**<br />
+│── 📜 src/index.js          &nbsp;&nbsp; **Archivo principal de la aplicación**<br />
+│── 📜 .gitignore            &nbsp;&nbsp; **Archivo para controlar lo que no queremos que se suba con el commit**<br /> 
+│── 📜 package-lock.js       &nbsp;&nbsp; **Archivo que contiene la informacion de los modulos y dependencias**<br />
+│── 📜 package.json          &nbsp;&nbsp; **Dependencias y configuración de npm**<br />
+│── 📜 README.md             &nbsp;&nbsp; **Documentación**<br />
 
 
 🎨 Estilos  <br />
