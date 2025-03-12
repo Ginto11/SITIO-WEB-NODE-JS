@@ -1,4 +1,4 @@
-#APLICACION NODE JS 📌
+#APLICACION NODE JS 
 - Aplicacion desarrollada Node JS, con el fin de poner en practica los conocimientos adquiridos, durante el aprendizaje del mismo.
 
 
