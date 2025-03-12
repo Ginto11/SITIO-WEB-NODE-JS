@@ -13,5 +13,5 @@ app.set('view engine', 'ejs')
 app.use(router)
 app.use(express.static(join(ruta_proyect, 'public')))
 
-app.listen(3000);
-console.log("Server escuchando en el puerto", 3000);
+app.listen(process.env.PORT || 3000);
+console.log("Server escuchando en el puerto", process.env.PORT || 3000);
