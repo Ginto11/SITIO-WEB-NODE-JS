@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/estilos') %>
+    <title>Acerca de</title>
+</head>
+<body>
+    <%- include('partials/navegacion') %>
+    <section class="container w-75 text-white d-flex flex-column align-items-center">
+        <h1 class="m-4">Tecnologías que Usamos</h1>
+        
+        <p class="m-4 w-75 lh-lg" style="text-align: justify;"> 
+            En nuestro enfoque de desarrollo web, trabajamos con una variedad de tecnologías modernas y poderosas para crear aplicaciones rápidas, escalables y visualmente atractivas.
+        </p>   
+        <ul class="m-4 w-75 lh-lg" style="text-align: justify;">
+            <li>
+                <p><b>Node.js:</b> Usamos Node.js como el entorno de ejecución de JavaScript en el servidor. Esto nos permite crear aplicaciones backend de alto rendimiento con un solo lenguaje, tanto en el servidor como en el cliente, simplificando el proceso de desarrollo.</p>
+            </li>
+            <li>
+                <p><b>HTML & CSS:</b> Son los pilares fundamentales de nuestra estructura web. HTML nos permite estructurar el contenido, mientras que CSS le da estilo y diseño, asegurando que nuestras páginas sean atractivas y funcionales en todo tipo de dispositivos.</p>
+            </li>
+            <li>
+                <p><b>Express.js:</b> Utilizamos Express, un marco de trabajo minimalista para Node.js, para gestionar de manera eficiente las rutas y solicitudes HTTP. Con Express, podemos construir APIs robustas y manejar la lógica del servidor de forma más rápida y flexible.</p>
+            </li>
+            <li>
+                <p><b>Git:</b> Git es nuestra herramienta de control de versiones. Nos permite gestionar y mantener el historial de cambios de nuestros proyectos, lo que facilita la colaboración en equipo y garantiza la estabilidad del código.</p>
+            </li>
+            <li>
+                <p><b>Bootstrap:</b> Para acelerar el diseño de nuestras interfaces, integramos Bootstrap, un framework CSS que nos ofrece una variedad de componentes y plantillas responsivas listas para usar, mejorando tanto el aspecto visual como la experiencia de usuario.</p>
+            </li>
+            <li>
+                <p><b>EJS (Embedded JavaScript):</b> Utilizamos EJS como motor de plantillas, lo que nos permite generar contenido dinámico de manera sencilla y eficiente. EJS nos facilita la integración de datos del servidor directamente en las vistas HTML, creando experiencias personalizadas para el usuario.</p>
+            </li>
+        </ul>
+        <p class="m-4 w-75 lh-lg" style="text-align: justify;">
+            Estas tecnologías juntas nos permiten crear soluciones web modernas, ágiles y escalables, asegurando una experiencia óptima para nuestros usuarios y un desarrollo eficiente y robusto para nuestro equipo.
+
+        </p>
+        <div class="container rounded m-4 p-0 w-75 d-flex justify-content-around border border-white">
+            <img class="estilos-iconos-about" src="/img/Bootstrap_logo.png" alt="">
+            <img class="estilos-iconos-about" src="/img/logo_node.png" alt="">
+            <img class="estilos-iconos-about" src="/img/ejs.png" alt="">
+            <img class="estilos-iconos-about" src="/img/logo_git.png" alt="">
+            <img class="estilos-iconos-about" src="/img/logo_html.png" alt="">
+            <img class="estilos-iconos-about" src="/img/css_logo.png" alt="">   
+        </div> 
+    </section>
+</body>
+</html>

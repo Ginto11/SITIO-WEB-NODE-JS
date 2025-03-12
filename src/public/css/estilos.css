@@ -1,0 +1,24 @@
+body {
+    background-color: #000;
+}
+
+.logo_github{
+    background-color: white;
+    border-radius: 50%;
+}
+
+.estilos-iconos {
+    display: block;
+    width: 5%;
+    margin: 10px;
+}
+
+.estilos-iconos-about {
+    display: block;
+    width: 5%;
+    margin: 10px;
+}
+
+.estilos-iconos > img {
+    width: 100%;
+}
