@@ -3,6 +3,9 @@
 
 Sitio web realizado con Node js, que se conecta con la API REST, para llevar a cabo cada una de las peticiones realizadas por el cliente.
 
+## Desarrollador
+Nelson Muñoz
+
 ## Descripción
 
 Este proyecto es una aplicación web construida con Node.js, Express, EJS y PostgreSQL. Utiliza Bootstrap para un diseño responsive y moderno. La aplicación permite a los usuarios interactuar con una base de datos PostgreSQL, realizando operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de manera sencilla.
@@ -68,10 +71,15 @@ npm start
 Accede a la aplicación a través de tu navegador en `http://localhost:3000` y empieza a interactuar con ella.
 
 ### Rutas
-- GET `/`: Página principal de la aplicación.
-- GET `/usuarios`: Muestra la lista de usuarios.
-- POST `/usuario`: Crea un nuevo usuario.
-- PUT `/usuario/:id`: Actualiza un usuario existente.
-- DELETE `/usuario/:id`: Elimina un usuario.
+- **GET** `/`: Página principal de la aplicación.
+- **GET** `/usuarios`: Muestra la lista de usuarios.
+- **POST** `/usuario`: Crea un nuevo usuario.
+- **PUT** `/usuario/:id`: Actualiza un usuario existente.
+- **DELETE** `/usuario/:id`: Elimina un usuario.
 
-
+# Actualizaciones
+- [x] Crear Servicio web.
+- [x] Desplegar el Back-End.
+- [x] Conectar Back-End y Front-End.
+- [x] Desarrollar la sección para crear usuario.
+- [ ] Diseñar la sección de comentarios para la publicacion. 
