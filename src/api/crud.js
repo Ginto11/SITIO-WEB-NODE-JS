@@ -1,5 +1,5 @@
 const createUser = async (req, res) => {
-    await fetch('https://api-rest-nodejs-postgres-sql-7c527afb970b.herokuapp.com/usuario', {
+    await fetch('https://api-rest-nodejs-postgres-sql-7c527afb970b.herokuapp.com/api/usuario', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
@@ -17,7 +17,7 @@ const createUser = async (req, res) => {
 }
 
 const getUsers = async (res) => {
-    await fetch('https://api-rest-nodejs-postgres-sql-7c527afb970b.herokuapp.com/usuarios', {
+    await fetch('https://api-rest-nodejs-postgres-sql-7c527afb970b.herokuapp.com/api/usuarios', {
         method: 'Get',
         headers: {
             'Content-type': 'application/json'
