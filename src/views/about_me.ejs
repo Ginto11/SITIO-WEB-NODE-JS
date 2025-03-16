@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <%- include('partials/links_styles')  %>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <section class="container w-75 text-white d-flex flex-column align-items-center">
+        <h1 class="m-4">SOBRE MI</h1>
+        <div class="m-4 d-flex w-75 justify-content-around align-items-center flex-row-reverse">
+            <ul>
+                <li>
+                    <p class="text-start p-1"> <b>Nombre:</b> Nelson Muñoz</p>
+                </li>
+                <li>
+                    <p class="text-start p-1"> <b>Edad:</b> 23 años</p>
+                </li>
+                <li>
+                    <p class="text-start p-1"><b>Ocupación:</b> Estudiante de Ingeniería en Software</p>
+                </li>
+            </ul>
+            <img src="/img/foto.jpg" alt="Foto" class="rounded" style="width: 40%;">
+        </div>
+        
+        <p class="m-4 w-75 lh-lg" style="text-align: justify;"> 
+            Nelson es un joven apasionado por la tecnología y el desarrollo de software, con un enfoque claro en su futuro profesional. A sus 23 años, se encuentra en pleno proceso de formación, estudiando Ingeniería en Software, y es un ejemplo de responsabilidad y dedicación. Siempre tiene una actitud positiva ante los desafíos y disfruta aprender nuevas tecnologías, lenguajes de programación y metodologías que le permitan expandir sus conocimientos.
+            Es una persona honesta, que valora la integridad tanto en su vida personal como en su vida profesional. Su ética de trabajo es ejemplar, y se esfuerza por ser puntual y cumplir con sus responsabilidades académicas y laborales. En cuanto a su formación, su principal meta es terminar su carrera y poder aplicar todo lo aprendido en proyectos reales, con el objetivo de contribuir al desarrollo tecnológico de su comunidad. 
+        </p>   
+    </section>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

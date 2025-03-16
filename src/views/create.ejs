@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/links_styles') %>
+    <title></title>
+</head>
+<body>
+  <nav class="bg-dark wv-100 d-flex align-items-center justify-content-around" style="height: 70px;">
+    <div>
+      <a style="display: flex;;" href="/"><h1><b>Aplicación &nbsp;</b></h1> <h1><b class="text-success"> Node JS</b></h1></a>
+    </div>
+  </nav>
+  <section class="container w-75 vh-100 text-white d-flex justify-content-center align-items-center">
+    <form action="/save"  method="POST" class="d-flex flex-column" style="gap: 15px;">
+        <h1 style="text-align: center;">Formulario</h1>
+        <div class="d-flex flex-column" style="gap: 15px;">
+            <div class="d-flex" style="gap: 15px;">
+                <div>
+                  <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div>
+                  <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido">
+                </div>
+            </div>
+            <div class="d-flex" style="gap: 15px;">
+                <div>
+                  <input id="edad" name="edad" type="number" class="form-control" placeholder="Edad">
+                </div>
+                <div>
+                  <input id="email" name="email" type="email" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Comentarios</label>
+                <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary" style="width: 47%;">Enviar</button>
+                <a href="/" type="submit" class="btn btn-danger"  style="width: 47%;">Cancelar</a>
+            </div>
+        </div>
+      </form>
+    </section>
+      <%- include('partials/footer') %>
+</body>
+</html>
