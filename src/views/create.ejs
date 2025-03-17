@@ -18,27 +18,27 @@
         <div class="d-flex flex-column" style="gap: 15px;">
             <div class="d-flex" style="gap: 15px;">
                 <div>
-                  <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
+                  <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre" required>
                 </div>
                 <div>
-                  <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido">
+                  <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido" required>
                 </div>
             </div>
             <div class="d-flex" style="gap: 15px;">
                 <div>
-                  <input id="edad" name="edad" type="number" class="form-control" placeholder="Edad">
+                  <input id="edad" name="edad" type="number" class="form-control" placeholder="Edad" required>
                 </div>
                 <div>
-                  <input id="email" name="email" type="email" class="form-control" placeholder="Email">
+                  <input id="email" name="email" type="email" class="form-control" placeholder="Email" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="comentario">Comentarios</label>
-                <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                <textarea placeholder="¿Que te parecio este sitio web?" class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
             </div>
             <div class="d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary" style="width: 47%;">Enviar</button>
-                <a href="/" type="submit" class="btn btn-danger"  style="width: 47%;">Cancelar</a>
+                <button type="submit" class="btn btn-primary" style="width: 47%;"><i class="bi bi-arrow-up-square-fill"></i>                  Enviar</button>
+                <a href="/" type="submit" class="btn btn-danger"  style="width: 47%;"><i class="bi bi-x-square"></i>                  Cancelar</a>
             </div>
         </div>
       </form>

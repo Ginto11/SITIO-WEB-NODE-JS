@@ -1,7 +1,8 @@
 import express from 'express';
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url';
-import router from './routes/views.routes.js'
+import router from './routes/views.routes.js';
+import morgan from 'morgan';
 
 
 const app = express()
@@ -11,6 +12,8 @@ const ruta_proyect = dirname(fileURLToPath(import.meta.url))
 app.set('views', join(ruta_proyect, 'views'))
 
 app.set('view engine', 'ejs')
+
+app.use(morgan('dev'));
 
 app.use(express.urlencoded({extended: false}));
 
