@@ -209,3 +209,71 @@ nav .link-nav i {
 .contenedor-comentarios .comentario a {
     margin: 3px;
 }
+
+
+/*FORMULARIO DE EDICION*/
+
+section h1{
+    padding-top: 30px;
+    color: #DADAD9;
+}
+
+form {
+    width: 50%;
+    background-color: #1F242E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    border-radius: 20px;
+    padding: 30px 0;
+}
+
+form > .contenedor-labels {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+}
+
+form .contenedor-inputs{
+    display: flex;
+    gap: 4px;
+}
+
+form .contenedor-labels button{
+    border-radius: 4px;
+}
+
+
+form .contenedor-labels textarea{
+    width: 100%;
+    max-height: 150px;
+    min-height: 100px;
+}
+
+form .contenedor-labels textarea::-webkit-scrollbar{
+    width: 7px;
+    background-color: #DADAD9;
+}
+
+form .contenedor-labels textarea::-webkit-scrollbar-thumb{
+    background-color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+form p {
+    margin: 0;
+    display: block;
+}
+
+form .contenedor-botones {
+    width: 85%;
+}
+
+form .contenedor-botones i {
+    margin-right: 4px;
+}

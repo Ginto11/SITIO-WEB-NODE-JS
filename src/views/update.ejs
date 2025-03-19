@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/links_styles') %>
+        <title>Actualizando</title>
+</head>
+
+<body>
+    <nav class="bg-dark wv-100 d-flex align-items-center justify-content-around" style="height: 70px;">
+        <div>
+            <a style="display: flex;;" href="/">
+                <h2><b>Aplicación &nbsp;</b></h2>
+                <h2><b class="text-success"> Node JS</b></h2>
+            </a>
+        </div>
+    </nav>
+    <section class="vh-100 d-flex justify-content-start align-items-center flex-column gap-4">
+        
+        <h1>Actualizando la información de <%= usuario.nombre %></h1>
+        <form action="/updating/<%= usuario.id %>" method="POST">
+            <div class="contenedor-labels">
+                <label for="nombre"><p><b>Nombre</b></p> 
+                    <div class="contenedor-inputs">
+                        <input class="form-control" type="text" name="nombre" id="nombre" required disabled value="<%= usuario.nombre %>">
+                        <button class="btn-form-editar btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                    </div>
+                </label>
+                <label for="apellido"><p><b>Apellido</b></p> 
+                    <div class="contenedor-inputs">
+                        <input class="form-control" type="text" name="apellido" id="apellido" required disabled value="<%= usuario.apellido %>">
+                        <button class="btn-form-editar btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                    </div>
+                </label>
+            </div>
+            <div class="contenedor-labels">
+                <label for="edad"><p><b>Edad</b></p> 
+                    <div class="contenedor-inputs">
+                        <input class="form-control" type="number" name="edad" id="edad" required disabled value="<%= usuario.edad %>">
+                        <button class="btn-form-editar btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                    </div>
+                </label>
+                <label for="email"><p><b>Email</b></p> 
+                    <div class="contenedor-inputs">
+                        <input class="form-control" type="email" name="email" id="email" required disabled value="<%= usuario.email %>">
+                        <button class="btn-form-editar btn btn-primary"><i class="bi bi-pencil-square"></i></button>
+                    </div>
+                </label>
+            </div>
+            <div class="contenedor-labels">
+                <label class="w-100" for="comentario"><p><b>Comentario</b></p> 
+                    <textarea class="form-control" name="comentario" id="comentario" rows="3"><%= usuario.comentario %></textarea>
+                </label>
+            </div>
+            <div class="contenedor-botones">
+                <button class="btn btn-warning w-50" type="submit" style="font-weight: bold;"><i class="bi bi-arrow-up-square-fill"></i>Actualizar</button>
+                <a class="btn btn-danger w-50" href="/coments" style="color: #000; font-weight: bold;"><i class="bi bi-x-square-fill" style="color: #000;"></i>Cancelar</a>
+            </div>
+        </form>
+
+    </section>
+
+
+    <%- include('partials/footer') %>
+
+    <script>
+
+        let $listaBtnsEditar = document.querySelectorAll('.btn-form-editar');
+
+        let elementos = Array.from($listaBtnsEditar);
+
+        console.log(elementos)
+
+        elementos.forEach(elemento => {
+
+            elemento.addEventListener('click', (evt)=> {
+
+                evt.preventDefault();
+
+                $inputTexto = elemento.previousElementSibling;
+                $i = elemento.firstChild;
+
+                if(elemento.firstChild.className == 'bi bi-pencil-square'){
+
+                    $inputTexto.disabled = false;
+                    $i.className = 'bi bi-check-lg'
+                } 
+                else {
+                    $inputTexto.disabled = true;
+                    $i.className = 'bi bi-pencil-square'
+                }
+
+
+            })
+        })
+
+    </script>
+
+</body>
+
+</html>

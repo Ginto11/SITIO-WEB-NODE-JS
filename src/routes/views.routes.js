@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createUser, getUsers } from '../api/crud.js';
+import { createUser, getUsers, getUserById, UpdateUser } from '../api/crud.js';
 
 const router = Router() 
 
@@ -16,5 +16,9 @@ router.get('/create', (req, res) => res.render('create'));
 router.get('/coments', (req, res) => { getUsers(res) })
 
 router.post('/save', (req, res) => { createUser(req, res) })
+
+router.get('/update/:id', (req, res) => { getUserById(req, res) });
+
+router.post('/updating/:id', (req, res) => { UpdateUser(req, res) })
 
 export default router

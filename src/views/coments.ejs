@@ -35,8 +35,8 @@
                         <li><b>Comentario: </b><%= usuario.comentario%></li>
                     </ul>
                     <div class="d-flex flex-column">
-                        <a class="btn btn-info" href="/edit/<%= usuario.id%>"><i class="bi bi-pencil-square"></i></a>
-                        <a class="btn btn-danger" href="/delete/<%= usuario.id%>"><i class="bi bi-trash"></i></a>
+                        <a class="btn btn-info" href="/update/<%= usuario.id%>"><i class="bi bi-pencil-square" style="color: black;"></i></a>
+                        <a class="btn btn-danger" href="/delete/<%= usuario.id%>"><i class="bi bi-trash" style="color: black;"></i></a>
                     </div>
                 </div>
             <%}); %>
@@ -101,7 +101,7 @@
                             <li><b>Comentario:</b> ${ usuario.comentario } </li>
                         </ul>
                         <div class="d-flex flex-column">
-                            <a class="btn btn-info" href="/edit/${ usuario.id }" title="En desarrollo" disabled><i class="bi bi-pencil-square"></i></a>
+                            <a class="btn btn-info" href="/update/${ usuario.id }" title="En desarrollo" disabled><i class="bi bi-pencil-square"></i></a>
                             <a class="btn btn-danger" href="/delete/${ usuario.id }" title="En desarrollo" disabled><i class="bi bi-trash"></i></a>
                         </div>
                     </div>
