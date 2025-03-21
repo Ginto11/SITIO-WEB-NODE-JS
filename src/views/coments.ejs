@@ -114,6 +114,38 @@
             }
             $contenedorComentarios.innerHTML = comentarios;
         }
+
+
+        let $listaBotones = Array.from(document.querySelectorAll('.btn-danger'));
+
+        $listaBotones.forEach(btn => {
+            
+            btn.addEventListener('click', (evt) => {
+    
+                let isAdmin = confirm('¿Eres el administrador?');
+    
+                if(!isAdmin){
+                    alert('De momento solo el usuario root puede eliminar registros. Gracias :)');
+                    evt.preventDefault();
+                } else {
+
+                    let contrasena = prompt('Ingrese la contraseña, por favor...');
+                    
+                    if(contrasena != '1001944317') {
+                        alert('Contraseña incorrecta.');
+                        evt.preventDefault();
+                    } else {
+
+                        alert('Eliminando registro...');
+                    }
+                    
+                }
+    
+            });
+        })
+
+
+
     </script> 
 </body>
 </html>

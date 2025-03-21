@@ -230,20 +230,19 @@ form {
     padding: 30px 0;
 }
 
-form > .contenedor-labels {
+form .contenedor-labels {
     width: 85%;
     display: flex;
     justify-content: space-between;
-    display: flex;
+}
+
+form .contenedor-labels label {
+    width: 45%;
 }
 
 form .contenedor-inputs{
     display: flex;
-    gap: 4px;
-}
-
-form .contenedor-labels button{
-    border-radius: 4px;
+    width: 100%;
 }
 
 
