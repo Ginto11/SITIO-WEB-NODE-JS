@@ -19,35 +19,35 @@
     </nav>
     <section class="vh-100 d-flex justify-content-start align-items-center flex-column gap-4">
         
-        <h1>Actualizando la información de <%= usuario.nombre %></h1>
-        <form action="/updating/<%= usuario.id %>" method="POST">
+        <h1>Actualizando la información de <%= publicacion.nombre %></h1>
+        <form action="/updating/<%= publicacion.id %>" method="POST">
             <div class="contenedor-labels">
                 <label for="nombre"><p><b>Nombre</b></p> 
                     <div class="contenedor-inputs">
-                        <input class="form-control" type="text" name="nombre" id="nombre" required  value="<%= usuario.nombre %>">
+                        <input class="form-control" type="text" name="nombre" id="nombre" required  value="<%= publicacion.nombre %>">
                     </div>
                 </label>
                 <label for="apellido"><p><b>Apellido</b></p> 
                     <div class="contenedor-inputs">
-                        <input class="form-control" type="text" name="apellido" id="apellido" required  value="<%= usuario.apellido %>">
+                        <input class="form-control" type="text" name="apellido" id="apellido" required  value="<%= publicacion.apellido %>">
                     </div>
                 </label>
             </div>
             <div class="contenedor-labels">
                 <label for="edad"><p><b>Edad</b></p> 
                     <div class="contenedor-inputs">
-                        <input class="form-control" type="number" name="edad" id="edad" required  value="<%= usuario.edad %>">
+                        <input class="form-control" type="number" name="edad" id="edad" required  value="<%= publicacion.edad %>">
                     </div>
                 </label>
                 <label for="email"><p><b>Email</b></p> 
                     <div class="contenedor-inputs">
-                        <input class="form-control" type="email" name="email" id="email" required value="<%= usuario.email %>">
+                        <input class="form-control" type="email" name="email" id="email" required value="<%= publicacion.email %>">
                     </div>
                 </label>
             </div>
             <div class="contenedor-labels">
                 <label class="w-100" for="comentario"><p><b>Comentario</b></p> 
-                    <textarea class="form-control" name="comentario" id="comentario" rows="3"><%= usuario.comentario %></textarea>
+                    <textarea class="form-control" name="comentario" id="comentario" rows="3"><%= publicacion.comentario %></textarea>
                 </label>
             </div>
             <div class="contenedor-botones">

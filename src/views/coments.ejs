@@ -8,10 +8,18 @@
     
 </head>
 <body>
+    
+    <div class="overlay inactive">
+        <div>
+            <h2>Ingresa la contraseña del usuario root, por favor...</h2>
+            <input class="form-control" type="text">
+            <button class="btn btn-primary">Aceptar</button>
+        </div>
+    </div>
     <section class="estilos-body-coments">
         <nav class="bg-dark wv-100 d-flex align-items-center justify-content-around" style="height: 70px;">
             <div>
-              <a style="display: flex;" href="/"><h2><b>Aplicación &nbsp;</b></h2> <h2><b class="text-success"> Node JS</b></h2></a>
+              <a style="display: flex;" href="/"><h2><b>Publicaciones &nbsp;</b></h2> <h2><b class="text-success"> Node JS</b></h2></a>
             </div>
             <div class="d-flex gap-5">
               <a class="btn-nav" style="padding: 3px 10px;" href="/"><i class="bi bi-house-door-fill"></i>Home</a>
@@ -25,18 +33,18 @@
             <button class="btn btn-success" name="pagina_siguiente" id="btnSiguiente">Siguiente<i class="bi bi-skip-forward-btn-fill" style="margin-left: 4px;"></i></button>
         </div>
         <div class="contenedor-comentarios" id="contenedor-comentarios">
-            <% usuarios.forEach(usuario => { %>
+            <% publicaciones.forEach(publicacion => { %>
                 <div class="comentario">
                     <img src="/img/imagen-mensaje.png" alt="Imagen_mensaje">
                     <ul class="flex-fill">
-                        <li><b>Nombre: </b><%= usuario.nombre %></li>
-                        <li><b>Apellido: </b><%= usuario.apellido %></li>
-                        <li><b>Edad: </b><%= usuario.edad %></li>
-                        <li><b>Comentario: </b><%= usuario.comentario%></li>
+                        <li><b>Nombre: </b><%= publicacion.nombre %></li>
+                        <li><b>Apellido: </b><%= publicacion.apellido %></li>
+                        <li><b>Edad: </b><%= publicacion.edad %></li>
+                        <li><b>Comentario: </b><%= publicacion.comentario%></li>
                     </ul>
                     <div class="d-flex flex-column">
-                        <a class="btn btn-info" href="/update/<%= usuario.id%>"><i class="bi bi-pencil-square" style="color: black;"></i></a>
-                        <a class="btn btn-danger" href="/delete/<%= usuario.id%>"><i class="bi bi-trash" style="color: black;"></i></a>
+                        <a class="btn btn-info" href="/update/<%= publicacion.id%>"><i class="bi bi-pencil-square" style="color: black;"></i></a>
+                        <a class="btn btn-danger" href="/delete/<%= publicacion.id%>"><i class="bi bi-trash" style="color: black;"></i></a>
                     </div>
                 </div>
             <%}); %>
@@ -53,12 +61,12 @@
         
         document.getElementById("btnSiguiente").addEventListener("click", (element) => {
             aumentar();
-            getUserPages(numero_pagina)
+            getPublicacionPages(numero_pagina)
         });
 
         document.getElementById("btnAnterior").addEventListener("click", (element) => {
             disminir();
-            getUserPages(numero_pagina)
+            getPublicacionPages(numero_pagina)
         });
         
         
@@ -74,49 +82,52 @@
             document.getElementById('numero_pagina').textContent = numero_pagina;
         }
 
-        const getUserPages = async (num_pagina) => {
+        const getPublicacionPages = async (num_pagina) => {
             
             $contenedorComentarios.textContent = '';
             
             let comentarios = ''
 
-            await fetch(`https://api-rest-nodejs-postgres-sql-7c527afb970b.herokuapp.com/api/usuarios/${num_pagina}`, {
+            await fetch(`https://api-rest-nodejs-postgres-sql-7c527afb970b.herokuapp.com/api/publicaciones/${num_pagina}`, {
                 method: 'GET',
                 headers: {
                     'Content-type': 'application/json'
                 }
             })
             .then(res => res.json())
-            .then(usuarios => {
+            .then(publicaciones => {
 
-
-                usuarios.forEach(usuario => { 
+                if(publicaciones.mensaje === 'UPS! no se encontraron datos por mostrar'){
+                    alert(publicaciones.mensaje)
+                    window.location.reload();
+                }
+                
+                
+                publicaciones.forEach(publicacion => { 
                     comentarios += `
                     <div class="comentario">
                         <img src="/img/imagen-mensaje.png" alt="Imagen_mensaje">
                         <ul class="flex-fill">
-                            <li><b>Nombre:</b> ${ usuario.nombre } </li>
-                            <li><b>Apellido:</b> ${ usuario.apellido } </li>
-                            <li><b>Edad:</b> ${ usuario.edad } </li>
-                            <li><b>Comentario:</b> ${ usuario.comentario } </li>
+                            <li><b>Nombre:</b> ${ publicacion.nombre } </li>
+                            <li><b>Apellido:</b> ${ publicacion.apellido } </li>
+                            <li><b>Edad:</b> ${ publicacion.edad } </li>
+                            <li><b>Comentario:</b> ${ publicacion.comentario } </li>
                         </ul>
                         <div class="d-flex flex-column">
-                            <a class="btn btn-info" href="/update/${ usuario.id }" title="En desarrollo" disabled><i class="bi bi-pencil-square"></i></a>
-                            <a class="btn btn-danger" href="/delete/${ usuario.id }" title="En desarrollo" disabled><i class="bi bi-trash"></i></a>
+                            <a class="btn btn-info" href="/update/${ publicacion.id }" title="En desarrollo" disabled><i class="bi bi-pencil-square"></i></a>
+                            <a class="btn btn-danger" href="/delete/${ publicacion.id }" title="En desarrollo" disabled><i class="bi bi-trash"></i></a>
                         </div>
                     </div>
                     `
                 }); 
             });
-            if(comentarios == "") {
-                alert("No hay mas datos por mostrar.");
-                window.location.reload();
-            }
             $contenedorComentarios.innerHTML = comentarios;
         }
 
 
         let $listaBotones = Array.from(document.querySelectorAll('.btn-danger'));
+
+        console.log($listaBotones)
 
         $listaBotones.forEach(btn => {
             

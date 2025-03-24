@@ -276,3 +276,40 @@ form .contenedor-botones {
 form .contenedor-botones i {
     margin-right: 4px;
 }
+
+
+/*ESTILOS DEL OVERLAY*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0007;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000 !important;
+
+}
+
+.overlay div {
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 30px;
+}
+
+.overlay div *{
+    width: 90%;
+} 
+
+.inactive {
+    display: none;
+}

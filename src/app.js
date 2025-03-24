@@ -1,7 +1,7 @@
 import express from 'express';
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url';
-import router from './routes/views.routes.js';
+import router from './routes/publicacion.routes.js';
 import morgan from 'morgan';
 
 
